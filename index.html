@@ -10,7 +10,7 @@
     body { font-family: 'Inter', sans-serif; background-color: #fff; color: #111; }
     header {
       height: 100vh;
-      background: url('https://www.apple.com/v/home/ax/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_large.jpg') no-repeat center center/cover;
+      background: url('DALL·E 2024-12-11 16.47.08 - A serene sunset scene with a computer desk by the window. The desk setup includes a Harman Kardon Soundsticks 4 speaker system, a 32-inch 4K monitor, .jpg') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -85,8 +85,10 @@
     window.addEventListener('scroll', () => {
       sections.forEach(section => {
         const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.85) {
+        if (top < window.innerHeight && top > -section.clientHeight) {
           section.classList.add('active');
+        } else {
+          section.classList.remove('active');
         }
       });
     });
