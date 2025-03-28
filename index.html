@@ -1,113 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chazz知识铺 | Master everything with Chazz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chazz知识铺 | Foreign Patent x AI Toolkit</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background-color: #fff; color: #111; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
     header {
       height: 100vh;
       background: url('https://littlefatfishloveeatinglittledragonbabe.github.io/chazz/bg.jpg') no-repeat center center/cover;
       position: relative;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #fff;
-      overflow: hidden;
     }
+
     header::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: 0;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(4px);
+      z-index: 1;
     }
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
       margin-bottom: 1rem;
-      z-index: 1;
-      position: relative;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.6);
     }
-    header p {
-      font-size: 1.4rem;
-      font-weight: 400;
-      z-index: 1;
-      position: relative;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
+    .hero-text p {
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
-    .section {
-      padding: 4rem 1rem;
-      max-width: 1080px;
-      margin: 0 auto;
+
+    .knowledge-section {
+      padding: 4rem 2rem;
+      background: #f9f9f9;
       text-align: center;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease;
     }
-    .section.active {
-      opacity: 1;
-      transform: translateY(0);
+
+    .knowledge-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: #333;
     }
-    .section h2 {
-      font-size: 2rem;
-      font-weight: 600;
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      color: #2a6ecf;
       margin-bottom: 1rem;
     }
-    .section p {
+
+    .card p {
       font-size: 1rem;
       color: #555;
+      margin-bottom: 1.5rem;
     }
+
+    .card a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #2a6ecf;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #1b4a9e;
+    }
+
     footer {
+      background: #2d2d2d;
+      color: #aaa;
       text-align: center;
-      padding: 2rem;
-      color: #888;
+      padding: 1.5rem;
       font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Master everything with Chazz</h1>
-    <p>从AI到专利，赋能你的专业成长之路</p>
+    <div class="hero-text">
+      <h1>Master everything with Chazz</h1>
+      <p>简约 × 高效 × 变现</p>
+    </div>
   </header>
 
-  <section class="section" id="about">
-    <h2>欢迎来到 Chazz知识铺</h2>
-    <p>这里是你获取涉外专利实战技巧、AI工具高效使用方法的首选空间。</p>
-  </section>
-
-  <section class="section" id="coming">
-    <h2>更多精彩内容，即将上线</h2>
-    <p>专利翻译工作台、ChatGPT实操模板、欧美专利对比指南……敬请期待！</p>
+  <section class="knowledge-section">
+    <h2>📚 Chazz知识谱</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🧭 涉外专利入门</h3>
+        <p>专为新手设计，讲透 PCT、巴黎公约、五局差异、申请节奏等核心概念。</p>
+        <a href="#">查看详情</a>
+      </div>
+      <div class="card">
+        <h3>🔍 涉外专利实务研讨</h3>
+        <p>结合实际案件与答复写作，深入分析 EESR、US OA、EP答复、翻译技巧等。</p>
+        <a href="#">查看详情</a>
+      </div>
+      <div class="card">
+        <h3>📖 欧美专利实务书单</h3>
+        <p>精选经典书目+个人阅读笔记：《Patent It Yourself》《EP Practice Essentials》等。</p>
+        <a href="#">查看详情</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Chazz All rights reserved | 联系我：panweizhuo@hcipi.com</p>
+    © 2025 Chazz. All rights reserved.
   </footer>
 
-  <script>
-    const sections = document.querySelectorAll('.section');
-    window.addEventListener('scroll', () => {
-      sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight && top > -section.clientHeight) {
-          section.classList.add('active');
-        } else {
-          section.classList.remove('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
