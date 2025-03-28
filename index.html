@@ -1,70 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chazz知识铺 | 涉外专利 x AI 能力库</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chazz知识铺 | Master everything with Chazz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-    header { background: #2d2d2d; color: white; padding: 2rem 1rem; text-align: center; }
-    section { max-width: 960px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    h2 { color: #2a6ecf; }
-    ul { line-height: 1.8; }
-    footer { text-align: center; padding: 1rem; color: #777; }
-    a { color: #2a6ecf; text-decoration: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #fff; color: #111; }
+    header {
+      height: 100vh;
+      background: url('https://www.apple.com/v/home/ax/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_large.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      transition: all 0.5s ease;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .section {
+      padding: 4rem 1rem;
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    .section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1rem;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Chazz知识铺</h1>
-    <p>专利实战 × AI工具 × 涉外经验，知识自由流动的空间</p>
+    <h1>Master everything with Chazz</h1>
+    <p>从AI到专利，赋能你的专业成长之路</p>
   </header>
 
-  <section>
-    <h2>🧭 涉外专利代理人知识库</h2>
-    <h3>📘 入门必读</h3>
-    <ul>
-      <li>涉外代理路线图：PCT vs 巴黎公约</li>
-      <li>五大局（CN, US, EP, JP, KR）基础差异总览</li>
-      <li>专利翻译中的语感与术语统一技巧</li>
-    </ul>
-    <h3>🚀 能力进阶</h3>
-    <ul>
-      <li>如何拆解 EESR/Office Action，快速读懂审查核心</li>
-      <li>从“功能性特征”到“发明点重构”的实操案例</li>
-      <li>如何用 ChatGPT 写一份有说服力的答复意见</li>
-    </ul>
+  <section class="section" id="about">
+    <h2>欢迎来到 Chazz知识铺</h2>
+    <p>这里是你获取涉外专利实战技巧、AI工具高效使用方法的首选空间。</p>
   </section>
 
-  <section>
-    <h2>📚 欧美专利实战书架</h2>
-    <ul>
-      <li><strong>《Patent It Yourself》</strong> - 入门美专代理经典</li>
-      <li><strong>《The Essentials of European Patent Law》</strong> - 欧洲代理人考试前的实战备书</li>
-      <li>Chazz私藏笔记：如何看懂 USPTO 的结构化审查逻辑</li>
-      <li>附录：一图读懂EP授权流程图 / US Final OA应对策略图</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🤖 AI工具精选与实操技巧</h2>
-    <ul>
-      <li>ChatGPT 专利代理人 Prompt 模板合集</li>
-      <li>如何用 GPT 快速翻译、润色、批注专利文书</li>
-      <li>AI 图像工具：Midjourney / DALL·E 制作技术图草图</li>
-      <li>如何一键生成 EP/US/Japan对比图，服务客户决策</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📮 联系我</h2>
-    <p>欢迎交流合作、约稿课程或使用 GPT 相关项目对接：</p>
-    <p>Email: <a href="mailto:chasgpt@proton.me">chasgpt@proton.me</a></p>
-    <p>微信公众号：Chazz知识铺（上线中）</p>
+  <section class="section" id="coming">
+    <h2>更多精彩内容，即将上线</h2>
+    <p>专利翻译工作台、ChatGPT实操模板、欧美专利对比指南……敬请期待！</p>
   </section>
 
   <footer>
-    <p>© 2025 Chazz All rights reserved | 本站由ChatGPT & 热情驱动</p>
+    <p>© 2025 Chazz All rights reserved | 联系我：panweizhuo@hcipi.com</p>
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.85) {
+          section.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
